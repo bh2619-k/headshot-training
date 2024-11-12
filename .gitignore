@@ -53,9 +53,5 @@ inference/
 webhooks.json
 untracked/
 
-# Docker
-Dockerfile
-.dockerignore
-
 # Environments
 .env
