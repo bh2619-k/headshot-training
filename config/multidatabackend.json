@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ohwx",
+    "type": "local",
+    "crop": "true",
+    "crop_aspect": "square",
+    "crop_style": "center",
+    "resolution": 1.0,
+    "minimum_image_size": 0.25,
+    "maximum_image_size": 1.0,
+    "target_downsample_size": 1.0,
+    "resolution_type": "area",
+    "cache_dir_vae": "cache/vae/ohwx",
+    "instance_data_dir": "datasets/ohwx",
+    "disabled": false,
+    "skip_file_discovery": "",
+    "caption_strategy": "instanceprompt",
+    "instance_prompt": "A photo of an ohwx human",
+    "prepend_instance_prompt": false,
+    "only_instance_prompt": true,
+    "metadata_backend": "json"
+  },
+  {
+    "id": "text-embeds",
+    "type": "local",
+    "dataset_type": "text_embeds",
+    "default": true,
+    "cache_dir": "cache/text/ohwx",
+    "disabled": false,
+    "write_batch_size": 128
+  }
+]

@@ -1,0 +1,61 @@
+*.code-workspace
+# Python and virtual environment files
+temp/
+env.sh
+*.pem
+*/config/config.json
+user_prompt_library.json
+__pycache__/
+.venv/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.egg-info/
+dist/
+build/
+*.egg
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+files.tbz
+*/config/auth.json
+work
+
+wandb/
+vae_cache/
+vendor/
+inference/
+webhooks.json
+untracked/
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Environments
+.env
