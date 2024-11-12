@@ -1,5 +1,5 @@
 # Include Python
-FROM python:3.11.1-buster
+FROM python:3.10.12-buster
 FROM pytorch/pytorch:2.4.0-cuda12.4-cudnn9-devel
 
 # Define your working directory
