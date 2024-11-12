@@ -22,7 +22,7 @@ RUN pip install -U poetry pip
 
 RUN poetry install --no-root
 
-RUN pip install optimum-quanto
+RUN pip install optimum-quanto runpod
 
 # Ensure the script is executable
 RUN chmod +x ./train.sh

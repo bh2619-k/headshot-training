@@ -28,3 +28,6 @@ __pycache__/
 
 # Documents
 documentation/
+
+# Test
+test_input.json

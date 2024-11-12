@@ -55,3 +55,6 @@ untracked/
 
 # Environments
 .env
+
+# Test
+test_input.json
