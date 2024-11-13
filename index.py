@@ -6,9 +6,6 @@ import sys
 import os
 import boto3
 from botocore.exceptions import NoCredentialsError, ClientError
-from dotenv import load_dotenv
-
-load_dotenv()
 
 LORA_FILENAME = "pytorch_lora_weights.safetensors"
 

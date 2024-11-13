@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "simpletuner"
+name = "Flux-simpletuner"
 version = "0.1.0"
-description = "Stable Diffusion 2.x and XL tuner."
-authors = ["bghira"]
+description = "Flux LoRA dreambooth tuner"
+authors = ["bh2619-k"]
 license = "SUL"
 readme = "README.md"
 
@@ -16,7 +16,6 @@ datasets = "^2.14.3"
 xformers = "^0.0.27.post2"
 bitsandbytes = "^0.43.3"
 dadaptation = "^3.1"
-wandb = "^0.16.1"
 requests = "^2.31.0"
 pillow = "^10.2.0"
 opencv-python = "^4.8.0.74"
@@ -43,6 +42,7 @@ tensorboard = "^2.15.1"
 triton = "^3.0.0"
 prodigyopt = "^1.0"
 sentencepiece = "^0.2.0"
+runpod = "^1.7.4"
 
 
 [build-system]
