@@ -16,6 +16,7 @@ datasets = "^2.14.3"
 xformers = "^0.0.27.post2"
 bitsandbytes = "^0.43.3"
 dadaptation = "^3.1"
+wandb = "^0.16.1"
 requests = "^2.31.0"
 pillow = "^10.2.0"
 opencv-python = "^4.8.0.74"
@@ -42,7 +43,6 @@ tensorboard = "^2.15.1"
 triton = "^3.0.0"
 prodigyopt = "^1.0"
 sentencepiece = "^0.2.0"
-runpod = "^1.7.4"
 
 
 [build-system]
