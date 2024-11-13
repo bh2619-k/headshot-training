@@ -17,6 +17,10 @@ RUN mkdir cache/vae/ohwx
 RUN mkdir cache/text
 RUN mkdir cache/text/ohwx
 
+# Install libgl1-mesa-glx
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt update && apt install -y libgl1-mesa-glx && rm -rf /var/lib/apt/lists/*
+
 # Using full path to Python in venv
 RUN python -m venv .venv
 
