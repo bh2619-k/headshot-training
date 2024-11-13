@@ -18,9 +18,9 @@ RUN mkdir cache/text
 RUN mkdir cache/text/ohwx
 
 # Using full path to Python in venv
-RUN python -m venv venv
+RUN python -m venv .venv
 
-RUN /bin/bash -c "source venv/bin/activate && pip install -U poetry pip optimum-quanto runpod && poetry install --no-root"
+RUN /bin/bash -c "source .venv/bin/activate && pip install -U poetry pip optimum-quanto && poetry install --no-root"
 
 # Install packages
 # RUN pip install -U poetry pip
@@ -33,4 +33,4 @@ RUN /bin/bash -c "source venv/bin/activate && pip install -U poetry pip optimum-
 RUN chmod +x ./train.sh
 
 # Call your file when your container starts
-CMD [ "venv/bin/python", "./index.py" ]
+CMD [ ".venv/bin/python", "./index.py" ]
