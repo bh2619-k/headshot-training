@@ -176,12 +176,12 @@ def training(job):
             upload_file_to_s3(
                 "./output/models/" + LORA_FILENAME,
                 s3_bucket,
-                s3_dataset_folder + LORA_FILENAME,
+                s3_dataset_folder + "/" + LORA_FILENAME,
             )
             return {
                 "output": {
                     "s3_bucket": s3_bucket,
-                    "s3_object_key": s3_dataset_folder + LORA_FILENAME,
+                    "s3_object_key": s3_dataset_folder + "/" + LORA_FILENAME,
                 }
             }
         else:

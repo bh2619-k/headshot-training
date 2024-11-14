@@ -1,6 +1,7 @@
 # Include Python
-FROM python:3.10.12-buster
-FROM pytorch/pytorch:2.4.0-cuda12.4-cudnn9-devel
+# FROM python:3.10.12-buster
+# FROM pytorch/pytorch:2.4.0-cuda12.4-cudnn9-devel
+FROM runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04
 
 # Define your working directory
 WORKDIR /
@@ -19,7 +20,7 @@ RUN mkdir cache/text/ohwx
 
 # Install libgl1-mesa-glx
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt update && apt install -y libgl1-mesa-glx && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt install -y libgl1-mesa-glx
 
 # Using full path to Python in venv
 RUN python -m venv .venv
@@ -38,3 +39,9 @@ RUN chmod +x ./train.sh
 
 # Call your file when your container starts
 CMD [ "python", "./index.py" ]
+
+# RUN python downloaddatasets.py
+
+# RUN train.sh
+
+# RUN python uploadlora.py
