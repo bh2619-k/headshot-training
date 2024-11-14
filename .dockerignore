@@ -31,3 +31,5 @@ documentation/
 
 # Test
 test_input.json
+downloaddatasets.py
+uploadlora.py
