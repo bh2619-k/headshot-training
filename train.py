@@ -1827,6 +1827,7 @@ def main():
 
         while True:
             step += 1
+            logger.info(f"Current step: {step}")
             batch = iterator_fn(step, *iterator_args)
             training_logger.debug(f"Iterator: {iterator_fn}")
             if args.lr_scheduler == "cosine_with_restarts":

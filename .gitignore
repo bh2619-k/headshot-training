@@ -55,8 +55,3 @@ untracked/
 
 # Environments
 .env
-
-# Test
-test_input.json
-downloaddatasets.py
-uploadlora.py

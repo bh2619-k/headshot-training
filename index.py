@@ -16,27 +16,6 @@ def file_exists(folder, filename):
     return os.path.exists(full_path)
 
 
-def download_file_from_s3(bucket_name, file_key, local_file_path):
-    """
-    Download a file from a S3 bucket to a local file path.
-
-    Parameters:
-    bucket_name (str): The name of the S3 bucket.
-    file_key (str): The key/path of the file in the S3 bucket.
-    local_file_path (str): The local file path to save the downloaded file.
-
-    Returns:
-    None
-    """
-    s3 = boto3.client("s3")
-
-    try:
-        s3.download_file(bucket_name, file_key, local_file_path)
-        print(f"File downloaded successfully: {local_file_path}")
-    except Exception as e:
-        print(f"Error downloading file: {e}")
-
-
 def download_folder_from_s3(bucket_name, s3_folder, local_dir):
     """
     Download all the objects from S3 bucket to a local folder

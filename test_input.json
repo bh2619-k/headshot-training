@@ -1,0 +1,6 @@
+{
+  "input": {
+    "s3_dataset_bucket": "aurawave-users-portraits",
+    "s3_dataset_folder": "Joshua-1731319691495"
+  }
+}
