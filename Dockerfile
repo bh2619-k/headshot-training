@@ -19,7 +19,7 @@ RUN mkdir cache/text/ohwx
 
 # Install libgl1-mesa-glx
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt update && apt install -y libgl1-mesa-glx && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt install -y libgl1-mesa-glx
 
 # Using full path to Python in venv
 RUN python -m venv .venv
@@ -37,4 +37,10 @@ RUN pip install optimum-quanto runpod
 RUN chmod +x ./train.sh
 
 # Call your file when your container starts
-CMD [ "python", "./index.py" ]
+# CMD [ "python", "./index.py" ]
+
+RUN python downloaddatasets.py
+
+RUN train.sh
+
+RUN python uploadlora.py
