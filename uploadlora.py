@@ -43,20 +43,20 @@ def file_exists(folder, filename):
     return os.path.exists(full_path)
 
 
-s3_bucket = ""
-s3_dataset_folder = ""
+s3_bucket = "aurawave-users-portraits"
+s3_dataset_folder = "Joshua-1731319691495"
 
 if file_exists("./output/models", LORA_FILENAME):
     upload_file_to_s3(
         "./output/models/" + LORA_FILENAME,
         s3_bucket,
-        s3_dataset_folder + LORA_FILENAME,
+        s3_dataset_folder + "/" + LORA_FILENAME,
     )
     print(
         {
             "output": {
                 "s3_bucket": s3_bucket,
-                "s3_object_key": s3_dataset_folder + LORA_FILENAME,
+                "s3_object_key": s3_dataset_folder + "/" + LORA_FILENAME,
             }
         }
     )

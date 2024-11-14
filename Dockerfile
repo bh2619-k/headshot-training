@@ -1,6 +1,7 @@
 # Include Python
-FROM python:3.10.12-buster
-FROM pytorch/pytorch:2.4.0-cuda12.4-cudnn9-devel
+# FROM python:3.10.12-buster
+# FROM pytorch/pytorch:2.4.0-cuda12.4-cudnn9-devel
+FROM runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04
 
 # Define your working directory
 WORKDIR /
@@ -37,10 +38,10 @@ RUN pip install optimum-quanto runpod
 RUN chmod +x ./train.sh
 
 # Call your file when your container starts
-# CMD [ "python", "./index.py" ]
+CMD [ "python", "./index.py" ]
 
-RUN python downloaddatasets.py
+# RUN python downloaddatasets.py
 
-RUN train.sh
+# RUN train.sh
 
-RUN python uploadlora.py
+# RUN python uploadlora.py
